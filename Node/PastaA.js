@@ -1,0 +1,1 @@
+module.exports.ola1 = 'ola'

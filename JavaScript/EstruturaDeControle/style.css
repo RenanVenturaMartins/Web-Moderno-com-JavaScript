@@ -1,0 +1,60 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    background-color: goldenrod;
+    margin: 25px;
+}
+
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgba(216, 203, 15, 0.596);
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+
+
+.nome {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: rgba(135, 207, 235, 0.5);
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+.defesa {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: rgba(135, 207, 235, 0.5);
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+.atk{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: rgba(135, 207, 235, 0.5);
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+.agil {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: rgba(135, 207, 235, 0.5);
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+.forca {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    background-color: rgba(135, 207, 235, 0.5);
+    border-bottom: 1px solid black;
+    margin-bottom: 18px;
+}
+
