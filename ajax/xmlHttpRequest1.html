@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+        function ajax (config) {
+            const xhr = new XMLHttpRequest()
+            xhr.open(config.metodo, config.url, true)
+
+            xhr.onload = e => {
+                if (xhr.status === 200) {
+                    config.sucesso(xhr.response)
+                } else if ( xhr.status >= 400) {
+                    config.erro({
+                        code: xhr.status,
+                        text: xhr.statusText
+                    })
+                }
+            }
+        }
+        
+        xhr.send()
+
+        ajax({
+            url: "dados/estudos.json",
+            metodo: "get",
+            sucesso(resposta) {
+                const estados = JSON.parse(resposta)
+
+
+                const linhas = estados.map(estados => {
+                    const TableDataId = document.createElement('td')
+                    TableDataId.innerHTML = estados.id
+
+                    const TableDataNome = document.createElement('td')
+                    TableDataNome.innerHTML = estados.nome
+
+                    const TableDataSiglas = document.createElement('td')
+                    TableDataSiglas.innerHTML =  estados.sigla
+
+                    const tr = document.createElement('tr')
+
+                    tr.appendChild(TableDataId)
+                    tr.appendChild(TableDataNome)
+                    tr.appendChild(TableDataSiglas)
+
+                    return tr
+                })
+
+                const tabela = document.createElement('table')
+                linhas.forEach(linha => tabela.appendChild(linha))
+                document.body.appendChild(tabela)
+            }, 
+            erro(e) {
+                const msg = document.createTextNode(`${e.code}: ${e.text}}`)
+                document.body.appendChild(msg)
+            }
+        })
+    </script>
+</body>

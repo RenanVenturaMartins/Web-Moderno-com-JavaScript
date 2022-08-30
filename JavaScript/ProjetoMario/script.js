@@ -28,3 +28,19 @@ const lopp = setInterval(() => {
 } , 10) ;
 
 document.addEventListener('keydown', jump);
+
+
+var btn = document.querySelector("#reset")
+btn.addEventListener("click", function() {
+location. reload();
+});
+
+var jump1 = document.querySelector("#jump")
+jump1.addEventListener("click", function() {
+    mario.classList.add('jump');
+
+    setTimeout(()=> {
+        mario.classList.remove('jump')
+    }, 500);
+}
+);
