@@ -22,6 +22,8 @@ const storage = multer.diskStorage ({
 
 const upload = multer({storage}).single('arquivo')
 
+
+
 app.post('/upload', (req, res) => {
     upload(req, res, err => {
         if (err) {
@@ -31,7 +33,20 @@ app.post('/upload', (req, res) => {
         })
     })
 
+    app.post('/formulario', (req, res) => {
 
+        res.send({
+            ...req.body,
+            id: 1
+        })
+    
+    })
 
+    app.get('/ParOuImpar' , (req, resp) => {
+        const par = parseInt(req.query.numero) % 2 === 0 
+        resp.send({
+            resultado: par? 'par' : 'impar'
+        })
+    })
 
 app.listen(8080, () => console.log('executando...'))
