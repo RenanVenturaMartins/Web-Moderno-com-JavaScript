@@ -22,6 +22,11 @@ module.exports = {
             filename: 'estilo.css'
         })
     ],
+    devServer: {
+        contentBase: "./public",
+        port:9090,
+
+    },
     optimization: {
         minimizer: [
           
@@ -38,7 +43,7 @@ module.exports = {
                         'sass-loader',
                     ]
                 }, {
-                    test:/\.(png|jpg|gif|svg)$/,
+                    test:/\.(png|svg|jpg|gif    )$/,
                     use: ['filer-loader']
 
                 }]
