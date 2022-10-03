@@ -1,5 +1,5 @@
 import Pessoa from "./pessoa";
-import './assets/css/estilo.css'
+import './assets'
 
 atedente = new  Pessoa
 console.log(atedente.comprimentar())
