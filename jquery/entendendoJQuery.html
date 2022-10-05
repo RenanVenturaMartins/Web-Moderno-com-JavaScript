@@ -14,6 +14,18 @@
     <div>2</div>
 
     <script>
-        // ...
+        
+      /*posso utilizar $ ou o proprio nome Jquery*/  
+      $('div').hide(5000).show(5000).fadeOut(5000)
+      console.log($('div').get(0) )
+      console.log($.isEmptyObject( {}))
+      console.log(jQuery.inArray('olaf' ,  ['ana', 'elsa' , 'cristof', 'olaf']))
+
+      $.fn.fundoazul = function () {
+        this.css('background-color' , 'orange')
+        return this
+      }
+
+      $('body').fundoazul().fadeOut(16000)
     </script>
 </body>
