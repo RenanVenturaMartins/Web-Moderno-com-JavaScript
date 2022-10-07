@@ -49,6 +49,25 @@
     </form>
 
     <script>
-        // ...
+        $('#feira').addClass('destaque').removeClass('destaque')
+        $('li').addClass('destaque')
+        $(' [wm-obrigatorio]').removeClass('destaque')
+        $('li.opcional').removeClass('destaque')
+        $('div > p > span').addClass('destaque')
+
+        //exclusivos do Jquery
+
+        $('li:first').css('color', 'black') //pega primeiro elemento da lista
+        $('li:odd').css('background-color' ,'blue') //seleciona os numeros impas 
+        $('li:gt(1)').css('font-family', 'georgia') //ele seleciona a partir do proximo objeto  desejado 
+        $('li:not(:last)').css('font-size',  '2em') //seleciona tudo do objeto menos o ultimo assim como informou
+        $('li:contains("o")').css('position', 'relative') //localiza as palavras que contenha o elemneto desejadp
+
+        $('form *').hide()
+        $('form :text').show()
+        $('form :password').show()
+        $('form :checkbox').show().css('color', 'red')
+        $('form :radio').show()
+        $('form :file').show()
     </script>
 </body>
