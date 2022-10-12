@@ -81,6 +81,26 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        const ComBordar = {'border': 'solid 8px orange'}
+        const SemBordar = {'border': 'none'}
+
+        $('a[href="#link3"]').parent().css(ComBordar).css(SemBordar)
+
+        $('li:last').prev().css(ComBordar).css(SemBordar)
+        $('a[href="#link3"]').parent().next().css(ComBordar).css(SemBordar)
+        $('a[href="#link1"]').parents().css(ComBordar).css(SemBordar)
+        $('a[href="#link1"]').parentsUntil($('aside')).css(ComBordar).css(SemBordar) //parentsUntil serve para voce seleciona todos os parentes do site ate um determinado limite que você immpoêm
+        $('main').children().css(ComBordar).css(SemBordar) //childre seleciona osfilhos que contem dentro da tag
+        $('main').find('a').css(ComBordar).css(SemBordar) // seleciona todo o elemento que você escolheu , caso nao tenha na parte escolhida nao afetara nada
+
+        const ElementosDom = document.getElementsByClassName('menu')
+
+        $(ElementosDom).css(ComBordar)
+        $('li').each((i, e) => {
+            $(e).css(ComBordar)
+        })
+
+
+    
     </script>
 </body>
